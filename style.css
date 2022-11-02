@@ -14,7 +14,6 @@ main{
 }
 
 .leftPath{
-  /*background-color: aquamarine;*/
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,6 +25,8 @@ main{
 
 .wrapperRight{
   width: 320px;
+  display: flex;
+  flex-direction: column;
 }
 
 .photoContainer{
@@ -36,6 +37,7 @@ main{
   border-radius: 140px;
   border: 5px white solid;
   margin-top: 20px;
+  align-self: center;
 }
 
 .photoContainer img{
@@ -72,10 +74,9 @@ main{
 .rightPath{
   color: #22465b;
   text-align: left;
-  /*background-color: #e3e3e3;*/
 }
 
-h1{
+.rightPath h1{
   color: black;
   font-size: 35px;
   background-color: #e3e3e3;
@@ -111,4 +112,40 @@ h1{
 a{
   text-decoration: none;
   color: #22465b;
+}
+
+a:hover{
+  color: blue;
+}
+
+@media (max-width: 1100px) {
+  main{
+    grid-template-columns: 1fr 1fr;
+  }
+  .wrapperRight{
+    width: 90%;
+    padding-left: 5%;
+  }
+}
+
+@media (max-width: 750px){
+  .rightPath h1{
+    font-size: 30px;
+    height: 120px;
+    padding: 40px 0 0 30px;
+  }
+  .containerRight{
+    padding: 10px 40px 10px;
+  }
+}
+
+@media (max-width: 680px){
+  .photoContainer{
+    width: 180px;
+    height: 180px;
+    border-radius: 90px;
+  }
+  .container i, .container span{
+    display: block;
+  }
 }
